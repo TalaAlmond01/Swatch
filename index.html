@@ -1,0 +1,566 @@
+<html>
+<head>
+<style>
+
+#header-image {
+  height:250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+#brush-pens {
+  height: 300px;
+  width:300px;
+  border-radius: 10px;
+  border-right:3px solid #d0c2c2;
+  border-bottom:3px solid #d0c2c2;
+  margin-top:100px;
+}
+.slideshow {
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+h1{
+  text-align: center;
+  font-size: 36px;
+  font-family:Futura,sans-serif;
+  color: black;
+  margin:0 auto;
+
+}
+#dropdown-button {
+  height:100px;
+  width: 100px;
+  z-index:2;
+  position:absolute;
+}
+#dropdown-menu {
+  height: 500px;
+  width:400px;
+  position:absolute;
+  border-radius: 10px;
+  visibility:hidden;
+  background-color:white;
+  z-index:2;
+  top:100px;
+}
+#dropdown-menu a {
+  font-size: 36px;
+  text-align: center;
+  color:#e8dad9;
+  font-family: Futura, sans-serif;
+  line-height:50px;
+  display:block;
+ width:60px;
+ padding:30px;
+ display:block;
+  width:60px;
+  padding:20px;
+}
+#menu-logo {
+width:325px;
+height:125px;
+display:block;
+margin-left: auto;
+margin-right: auto;
+margin-top:25px;
+}
+#blackout {
+  background-color:rgba(0,0,0,0.5);
+  z-index:1;
+  position:absolute;
+  width:100%;
+  height:100%;
+  visibility:hidden;
+}
+
+body {
+  background-color: white;
+  font-family: Futura, sans-serif;
+  margin:0;
+  padding:0;
+}
+
+#flexbox {
+  background-color: rgb(232, 218, 217);
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.products {
+  width: 17%;
+  height: 180px;
+  margin: 20px;
+  border-radius: 10px;
+  margin: 90px 30px;
+  background-color: white;
+  border-right: 5px solid rgb(208, 194, 194);
+  border-bottom: 5px solid rgb(208, 194, 194);
+}
+
+#colorDet {
+  margin-left: 20px;
+  background-color: #BAE3FB;
+  width: 16%;
+  height: 57px;
+  border-radius: 10px;
+  margin-top: 10px;
+  position: absolute;
+  border-bottom: 5px solid rgb(208, 194, 194);
+  border-right: 5px solid rgb(208, 194, 194);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#outerbox {
+  background-color: rgb(232, 218, 217);
+  border-radius: 10px;
+  width: 90%;
+  position: relative;
+  border-right: 5px solid rgb(208, 194, 194);
+  border-bottom: 5px solid rgb(208, 194, 194);
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  border-right: 5px solid rgb(208, 194, 194);
+  border-bottom: 5px solid rgb(208, 194, 194);
+}
+
+p, h3 {
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px rgb(208, 194, 194);
+}
+
+p {
+  font-size: 13px;
+}
+
+h2 {
+  color: white;
+  text-shadow: 2px 2px rgb(208, 194, 194);
+}
+#swatches-header {
+  background-color:#e8dad9;
+  border-radius:10px;
+  border-bottom: 5px solid #d0c2c2;
+  border-right: 5px solid #d0c2c2;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+h1 {
+  margin:0 auto;
+  float:left;
+  font-size: 40px;
+}
+p {
+  font-size: 20px;
+}
+body {
+  font-family: Futura, sans-serif;
+  color: white;
+  text-shadow: 2px 2px rgb(208, 194, 194);
+}
+.headerThing {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#color-row {
+  width: 20%;
+  margin: 0 auto;
+  height: 30px;
+  background-color: #BAE3FB;
+  border: 2px solid red;
+  margin-top: 20px;
+}
+#more-blue {
+  background-color:#e8dad9;
+  border-radius:10px;
+  border-bottom: 5px solid #d0c2c2;
+  border-right: 5px solid #d0c2c2;
+  width: 70%;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.indiv-flex {
+  height: 38px;
+  text-shadow: 0px 0px white;
+  text-align: center;
+}
+
+#indiv-blue {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 45px;
+  margin-top: 0px;
+}
+
+#largeBlueBox {
+  background-color:#e8dad9;
+  border-radius: 10px;
+  border-bottom: 5px solid #d0c2c2;
+  border-right: 5px solid #d0c2c2;
+  width: 50%;
+  height: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-top: 40px;
+}
+
+#sky-color-box {
+  background-color: #BAE3FB;
+  width: 90%;
+  margin:0 auto;
+  border-bottom: 5px solid #d0c2c2;
+  border-right: 5px solid #d0c2c2;
+  border-radius: 10px;
+  height: 50%;
+  margin-top: 70px;
+}
+
+#head-of-blue-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+#wheel{
+  background-color:rgb(232, 218, 217);
+  width: 80%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  border-right:5px solid black;
+  border-bottom:5px solid black;
+  margin:0 auto;
+  border-color: rgb(208, 194, 194);
+  align-items: center;
+  margin-top: 20px;
+}
+h4{
+  color: white;
+  font-size: 35px;
+  display: flex;
+  justiy-content: space-around;
+  font-family: griphite;
+  margin-left: 5%;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow: 2px 2px rgb(208, 194, 194);
+}
+#suga{
+  width: 700px;
+  height: 700px;
+ display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 85px;
+}
+
+
+h5{
+  color: white;
+  font-family: futura;
+  font-size: 18px;
+  text-align: center;
+  width: 60%;
+  margin-left: 4%;
+  margin-right: 2%;
+  text-shadow: 2px 2px rgb(208, 194, 194);
+}
+#wheel-content{
+  visibility:hidden;
+  position:absolute;
+  left:0;
+  right:0;
+  margin:auto;
+  top:300;
+
+}
+#swatches-content{
+  visibility:hidden;
+  position:absolute;
+  top:300;
+  left:0;
+  right:0;
+  margin:auto;
+}
+#products-content{
+  visibility:hidden;
+  position:absolute;
+  top:300;
+  left:0;
+  right:0;
+  margin:auto;
+}
+
+ </style>
+
+<body>
+  <div id="blackout"> </div>
+  <a onclick="showMenu()" ><img id="dropdown-button"src="img/icons_menu.png"></a>
+<div id="dropdown-menu">
+<img id="menu-logo" src="img/swatch_nologo.png">
+<a onclick="showHome()"> Home </a>
+<a onclick="showWheel()"> Color Wheel </a>
+<a onclick="showSwatches()"> Swatches </a>
+</div>
+<img id="header-image" src="img/swatch_header.png">
+<div id="home-content">
+<div class="slideshow">
+  <img id="brush-pens" src="img/slideshow_slide1.jpg" size=2048x1536&size_mode="3">
+<img id="brush-pens" src="img/slideshow_slide2.jpg">
+<img id="brush-pens" src="img/slideshow_slide3.png">
+</div>
+<h1> Try the Ecoline Brush Pens! </h1>
+</div>
+<div id="wheel-content">
+<div id="wheel">
+  <h4>Color Wheel</h4>
+  <h5> Utilize this tool to discover additional colors that compliment and contrast your initial choice.</h5>
+</div>
+<img id="suga" src="img/unspecified.png">
+ <style>
+  @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+</style>
+</div>
+<div id="swatches-content">
+<div id="swatches-header">
+  <div class="headerThing">
+    <h1> Swatches </h1>
+  </div>
+  <div class="headerThing">
+    <p>Focus on choosing a variety of different shades of a different color.</p>
+  </div>
+</div>
+<div id="color-row" onclick="showBlues()">
+</div>
+<div id="more-blue">
+  <div id="indiv-blue">
+    <div class="indiv-flex" style="background-color:#DAF6FE">
+      Carefree
+    </div>
+    <div class="indiv-flex" style="background-color:#CBF0FD">
+      Bravo
+    </div>
+    <div class="indiv-flex" style="background-color:#CCEBFD">
+      Surprise
+    </div>
+    <div class="indiv-flex" style="background-color:#D7F1FC">
+      Iceberg
+    </div>
+    <div class="indiv-flex" style="background-color:#DEECFB">
+      Glass
+    </div>
+    <div class="indiv-flex" style="background-color:#BDE4F2">
+      Aviary
+    </div>
+    <div class="indiv-flex" style="background-color:#A8DDF5">
+      Quench
+    </div>
+    <div class="indiv-flex" style="background-color:#BAE3FB">
+      Sky
+    </div>
+    <div class="indiv-flex" style="background-color:#C4E6FD">
+      Soar
+    </div>
+    <div class="indiv-flex" style="background-color:#CADDF3">
+      Rhythmic
+    </div>
+    <div class="indiv-flex" style="background-color:#8AC2DB">
+      Liquid
+    </div>
+    <div class="indiv-flex" style="background-color:#77BFDF">
+      Cloudless
+    </div>
+    <div class="indiv-flex" style="background-color:#77BFDF">
+      Bluebell
+    </div>
+    <div class="indiv-flex" style="background-color: #95C2E8">
+      Something
+    </div>
+    <div class="indiv-flex" style="background-color: #95C2E8">
+      Wondrous
+    </div>
+  </div>
+</div>
+<div id="largeBlueBox">
+  <div id="head-of-blue-box">
+    <div class="sky">
+      <h1> Sky </h1>
+    </div>
+    <div class="sky">
+      <p> #BAE3FB </p>
+    </div>
+  </div>
+    <div>
+      <p> Sky Blue is a very imaginative shade that symbolizes youth. </p>
+    </div>
+  <div onclick="showProducts()" id="sky-color-box">
+  </div>
+</div>
+</div>
+<div id="products-content">
+<div id=outerbox>
+   <div id="colorDet">
+     <div>
+       <h2> Sky </h2>
+     </div>
+     <div>
+       <h3>#BAE3FB</h3>
+     </div>
+   </div>
+   <div id=flexbox>
+      <div class=products>
+        <a href="">
+         <img src="img/aviary_brush2.jpg">
+        </a>
+        <p>Ecoline Brush Pen</p>
+        <h3> $3.20 USD </h3>
+      </div>
+     <div class=products>
+       <a href="">
+      <img src="img/brushpen.jpg">
+       </a>
+       <p>Name of Product</p>
+      <h3>$X.XX USD</h3>
+    </div>
+    <div class=products>
+      <a href="">
+      <img src="img/brushpen3.jpg">
+      </a>
+      <p>Name of Product</p>
+      <h3>$X.XX USD</h3>
+    </div>
+    <div class=products>
+      <a href="">
+      <img src="img/highlighter3.jpg">
+      </a>
+      <p>Name of Product</p>
+      <h3>$X.XX USD</h3>
+    </div>
+    <div class=products>
+      <a href="">
+      <img src="img/pen2.jpg">
+      </a>
+      <p>Name of Product</p>
+      <h3>$X.XX USD</h3>
+    </div>
+    <div class=products>
+      <a href="">
+      <img src="img/highlighter4.jpg">
+      </a>
+      <p>Name of Product</p>
+      <h3>$X.XX USD</h3>
+    </div>
+    <div class=products>
+      <a href="">
+      <img src="img/pen3.jpg">
+      </a>
+      <p>Name of Product</p>
+      <h3>$X.XX USD</h3>
+    </div>
+    <div class=products>
+      <a href="">
+      <img src="img/aviary_brush3 copy 3.jpg">
+      </a>
+      <p>Name of Product</p>
+      <h3>$X.XX USD</h3>
+    </div>
+    <div class=products>
+      <a href="">
+      <img src="img/highlighter2 copy.jpg">
+      </a>
+      <p>Name of Product</p>
+      <h3>$X.XX USD</h3>
+    </div>
+    <div class=products>
+      <a href="">
+      <img src="img/pen4.jpg">
+      </a>
+      <p>Name of Product</p>
+      <h3>$X.XX USD</h3>
+    </div>
+    <div class=products>
+      <a href="">
+      <img src="img/aviary_brush4 copy 6.jpg">
+      </a>
+      <p>Name of Product</p>
+      <h3>$X.XX USD</h3>
+    </div>
+    <div class=products>
+      <img src="">
+    </div>
+   </div>
+ </div>
+</div>
+<script>
+var dropdownbutton = document.getElementById("dropdown-button")
+var menu = document.getElementById("dropdown-menu")
+var blackout = document.getElementById("blackout")
+function showMenu(){
+  if (menu.style.visibility == "visible") {
+  menu.style.visibility="hidden"
+  blackout.style.visibility="hidden"
+  } else {
+  menu.style.visibility="visible"
+  blackout.style.visibility="visible"
+  }
+}
+var home = document.getElementById("home-content")
+var wheel = document.getElementById("wheel-content")
+var swatches = document.getElementById("swatches-content")
+var products = document.getElementById("products-content")
+function showHome(){
+  home.style.visibility="visible";
+  wheel.style.visibility="hidden";
+  swatches.style.visibility="hidden";
+  products.style.visibility="hidden";
+  menu.style.visibility="hidden";
+  blackout.style.visibility="hidden";
+}
+function showWheel(){
+  home.style.visibility="hidden";
+  wheel.style.visibility="visible";
+  swatches.style.visibility="hidden";
+  products.style.visibility="hidden";
+  menu.style.visibility="hidden";
+  blackout.style.visibility="hidden";
+}
+function showSwatches(){
+  home.style.visibility="hidden";
+  wheel.style.visibility="hidden";
+  swatches.style.visibility="visible";
+  products.style.visibility="hidden";
+  menu.style.visibility="hidden";
+  blackout.style.visibility="hidden";
+}
+function showProducts(){
+  products.style.visibility="visible"
+  swatches.style.visibility="hidden"
+  menu.style.visibility="hidden";
+  blackout.style.visibility="hidden";
+}
+
+</script>
+
+</body>
+</html>
